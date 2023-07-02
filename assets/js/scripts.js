@@ -151,17 +151,34 @@ var questionIndex = 1;
 var timeLeft = 60;
 var score = 0;
 
+function updateColor(event){
+    event.target.style.backgroundColor = white;
+}
+
 function startQuiz() {
   //countdown();
   CurrentQuestionE1.innerHTML = questions[0];
   for (ansbut in ansButtons) {
     ansButtons[ansbut].addEventListener("click", nextQuestion);
-    ansContainer.children[ansbut].firstChild.innerHTML = answers[0][ansbut];
+    ansContainer.children[ansbut].textContent = answers[0][ansbut];
+    
   }
 }
 
 function nextQuestion(event) {
-  ansButtons[correctAns[questionIndex-1]].style.backgroundColor = "green";
+    ansButtons[correctAns[questionIndex-1]].style.borderColor = "green";
+  //console.log(event.target);
+  //console.log(ansButtons[correctAns[questionIndex-1]].firstChild);
+  if(event.target == ansButtons[correctAns[questionIndex-1]]){
+    //event.target.setAttribute("class", "correct");
+    score += 10;
+    updateScore();
+  }else{
+    timeLeft -= 5;
+    //event.target.setAttribute("class", "incorrect");
+    event.target.style.borderColor = "red";
+    console.log("time decreased");
+  }
   setTimeout(function () {
 
     questionIndex += 1;
@@ -169,12 +186,16 @@ function nextQuestion(event) {
     CurrentQuestionE1.innerHTML = questions[questionIndex];
 
     for (ansbut in ansButtons) {
-        ansContainer.children[ansbut].firstChild.innerHTML = answers[questionIndex][ansbut];
-        ansContainer.children[ansbut].style.backgroundColor = "pink";
-        
+        ansContainer.children[ansbut].textContent = answers[questionIndex][ansbut];
+        ansButtons[ansbut].style.borderColor = "white";
       }
   }, 300);
 
+
+
+  event.target.removeAttribute("correct");
+  event.target.removeAttribute("incorrect");
+  
   event.stopPropagation();
 }
 

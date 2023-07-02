@@ -1,0 +1,59 @@
+body{
+    background-color: #fbfabd;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;;
+}
+header{
+    color:#ff90bb;
+    display: flex;
+    justify-content: space-between;
+    
+}
+header h3{
+    display: inline-flex;
+}
+header h3:hover{
+    color:#ff2171;
+}
+header #Timer, header #currentScore{
+    color:black;
+    
+}
+
+main{
+    margin: 30px;
+    display: block;
+    
+}
+main div ul {
+    list-style: none;
+    display: block;
+    width: max-content;
+}
+main div ul li {
+    background-color: #ff90bb;
+    padding-inline: 10px;
+    padding-block: 5px;;
+    margin: 10px; 
+    border-radius: 10px;
+    font-size: 23px;
+    border-style: solid;
+    border-color: whitesmoke;
+    border-width: 2px;
+
+}
+main div ul li a:hover{
+    background-color:#ff2171;
+    padding-inline: 10px;
+    padding-block: 1px;;
+    margin: 10px; 
+    width: inherit;
+    
+    border-radius: 4px;
+}
+
+
+
+
+
+

@@ -1,0 +1,145 @@
+Sure! Here's a 20-question multiple-choice quiz on HTML, CSS, Git, and JavaScript:
+
+1. Which of the following is not a programming language?
+   a) HTML
+   b) CSS
+   c) JavaScript
+   d) Git
+
+2. What does HTML stand for?
+   a) HyperText Markup Language
+   b) HyperText Makeup Language
+   c) Hyper Transfer Markup Language
+   d) Hyper Tool Markup Language
+
+3. Which tag is used to define a paragraph in HTML?
+   a) <p>
+   b) <br>
+   c) <a>
+   d) <h1>
+
+4. What does CSS stand for?
+   a) Cascading Style Sheet
+   b) Creative Style Sheet
+   c) Computer Style Sheet
+   d) Colorful Style Sheet
+
+5. Which property is used to change the text color in CSS?
+   a) background-color
+   b) font-color
+   c) text-color
+   d) color
+
+6. Which command is used to initialize a Git repository?
+   a) git add
+   b) git init
+   c) git commit
+   d) git clone
+
+7. Which command is used to stage changes in Git?
+   a) git add
+   b) git init
+   c) git commit
+   d) git push
+
+8. What is the purpose of the "document.getElementById()" method in JavaScript?
+   a) To get the value of an input field
+   b) To retrieve an element from the DOM
+   c) To create a new HTML element
+   d) To append an element to the DOM
+
+9. Which of the following is not a JavaScript data type?
+   a) String
+   b) Boolean
+   c) Integer
+   d) Object
+
+10. How do you declare a variable in JavaScript?
+    a) var
+    b) const
+    c) let
+    d) All of the above
+
+11. Which CSS property is used to add spacing between HTML elements?
+    a) padding
+    b) margin
+    c) space
+    d) spacing
+
+12. Which HTML tag is used to link an external JavaScript file?
+    a) <script>
+    b) <link>
+    c) <style>
+    d) <a>
+
+13. What does the "git pull" command do?
+    a) Pushes changes to a remote repository
+    b) Fetches and merges changes from a remote repository
+    c) Creates a new branch in Git
+    d) Discards all local changes and resets the repository
+
+14. Which of the following is a JavaScript framework/library?
+    a) React
+    b) Django
+    c) Express
+    d) Flask
+
+15. How do you comment a single line in JavaScript?
+    a) // Comment
+    b) <!-- Comment -->
+    c) /* Comment */
+    d) ** Comment **
+
+16. Which CSS property is used to make text bold?
+    a) font-weight
+    b) text-style
+    c) font-style
+    d) text-bold
+
+17. What is the purpose of the "addEventListener" method in JavaScript?
+    a) To add a new HTML element to the DOM
+    b) To add an event handler to an HTML element
+    c) To modify the style of an HTML element
+    d) To remove an HTML element from the DOM
+
+18. Which command is used to create a new branch in Git?
+    a) git add
+    b) git init
+    c) git branch
+    d) git commit
+
+19. Which of the following is not a valid CSS selector?
+    a) .class-name
+    b) #id-name
+    c) $name
+    d) element-name
+
+20. What does the "console.log()" function do in JavaScript?
+    a) Displays output in the console
+    b) Prints a message to the user's screen
+    c) Shows a pop-up message
+    d) Executes a JavaScript function
+
+Answers:
+1. d) Git
+2. a) HyperText Markup Language
+3. a) <p>
+4. a) Cascading Style Sheet
+5. d) color
+6. b) git init
+7. a) git add
+8. b) To retrieve an element from the DOM
+9. c) Integer
+10. d) All of the above
+11. b) margin
+12. a) <script>
+13. b) Fetches and merges changes from a remote repository
+14. a) React
+15. a) // Comment
+16. a) font-weight
+17. b) To add an event handler to an HTML element
+18. c) git branch
+19. c) $name
+20. a) Displays output in the console
+
+Please note that the quiz is for educational purposes and does not cover all aspects of the mentioned topics.

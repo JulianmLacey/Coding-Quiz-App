@@ -1,59 +1,93 @@
-body{
-    background-color: #fbfabd;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;;
+body {
+  background-color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-header{
-    color:#ff90bb;
-    display: flex;
-    justify-content: space-between;
-    
+header {
+  color: #ff90bb;
+  display: flex;
+  justify-content: space-between;
 }
-header h3{
-    display: inline-flex;
+header h3 a{
+  color: #ff90bb;
+  display: inline-flex;
+  text-decoration: none;
 }
-header h3:hover{
-    color:#ff2171;
+header h3:hover a{
+  color: #ff2171;
 }
-header #Timer, header #currentScore{
-    color:black;
-    
+header #Timer,
+header #currentScore {
+  color: black;
 }
 
-main{
-    margin: 30px;
-    display: block;
-    
+main {
+  padding-left: 5%;
+  width: 90%;
+  display: block;
+  text-align: center;
+  
+}
+
+main button{
+  background-color: #ff90bb;
+  padding-inline: 10px;
+  padding-block: 7px;
+  margin: 5px;
+
+  border-radius: 10px;
+  font-size: 23px;
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
+}
+main h3{
+  justify-self: center;
+}
+
+main div{
+  /*padding-inline: 20%;*/
+  justify-content: center;
 }
 main div ul {
-    list-style: none;
-    display: block;
-    width: max-content;
+  list-style: none;
+  display: block;
+  text-align: left;
+  
 }
 main div ul li {
-    background-color: #ff90bb;
-    padding-inline: 10px;
-    padding-block: 5px;;
-    margin: 10px; 
-    border-radius: 10px;
-    font-size: 23px;
-    border-style: solid;
-    border-color: whitesmoke;
-    border-width: 2px;
+  background-color: #ff90bb;
+  padding-inline: 10px;
+  padding-block: 7px;
+  margin: 5px;
 
+  border-radius: 10px;
+  font-size: 23px;
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
 }
-main div ul li a:hover{
-    background-color:#ff2171;
-    padding-inline: 10px;
-    padding-block: 1px;;
-    margin: 10px; 
-    width: inherit;
-    
-    border-radius: 4px;
+main div ul li:hover {
+  background-color: #ff2171 !important;
+  padding-inline: 10px;
 }
 
+#mainHS{
+  padding-inline: 40%;
+}
 
-
-
-
-
+#todo-list{
+  list-style: none;
+  display: inherit;
+  justify-content: center;
+}
+#todo-list li{
+  margin-inline: 30%;
+  display:inherit;
+  border-style: solid;
+  border-color: #ff2171;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  font-size: large;
+  padding-block: 7px;
+ }

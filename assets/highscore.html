@@ -9,22 +9,21 @@
 </head>
 <body>
     <header>
-    <h3 id="highScores">View High Scores</h3>
-    <h3 id="Timer">Time: 60</h3>
+    <h3>View High Scores</h3>
+    <h3 onclick="window.location.href = './quiz.html'">Play Again</h3>
     </header>
-    <main>
-        <H1 id="currentQuestion"></H1>
-            <div>
-                <ul id="answer">
-                    <li><a>A</a></li>
-                    <li><a>B</a></li>
-                    <li><a>C</a></li>
-                    <li><a>D</a></li>
-                </ul>
-            </div>
+    <main id="mainHs">
+        <H1>High Scores</H1>
+        <form id="todo-form" method="POST">
+            <label for="todo-text">Save Score: </label>
+            <input type="text" placeholder="Enter Initials: " name="todo-text" id="todo-text" />
+          </form>
+          
+          <ul id="todo-list"></ul>
+
 
     </main>
 </body>
 
-<script src="./assets/js/scripts.js"></script>
+<script src="./js/highScores.js"></script>
 </html>

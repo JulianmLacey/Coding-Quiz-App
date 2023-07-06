@@ -54,86 +54,85 @@ function endGame(){
 
 //var MCQ = {
 var questions = [
-  "Which of the following is not a programming language?",
-  "What does HTML stand for?",
-  "Which tag is used to define a paragraph in HTML?",
-  "What does CSS stand for?",
-  "Which property is used to change the text color in CSS?",
-  "Which command is used to initialize a Git repository?",
-  "Which command is used to stage changes in Git?",
-  "What is the purpose of the 'document.getElementById()' method in JavaScript?",
-  "Which of the following is not a JavaScript data type?",
-  "How do you declare a variable in JavaScript?",
-  "Which CSS property is used to add spacing between HTML elements?",
-  "Which HTML tag is used to link an external JavaScript file?",
-  "What does the 'git pull' command do?",
-  "Which of the following is a JavaScript framework/library?",
-  "How do you comment a single line in JavaScript?",
-  "Which CSS property is used to make text bold?",
-  "What is the purpose of the 'addEventListener' method in JavaScript?",
-  "Which command is used to create a new branch in Git?",
-  "Which of the following is not a valid CSS selector?",
-  "What does the 'console.log()' function do in JavaScript?",
+  "How many programmers does it take to change a lightbulb?",
+  "What do you call a programmer who's good with a bow and arrow?",
+  "What do you call a coding spider?",
+  "Why did the programmer quit his job?",
+  "What is a programmer's favorite beverage?",
+  "How does a programmer fish?",
+  "What do you call a coding dinosaur?",
+  "Why did the developer go broke?",
+
+  "Why did the computer go to the doctor?",
+  "What's a programmer's favorite song?",
 ];
 
 const answers = [
-  ["a) HTML", "b) CSS", "c) JavaScript", "d) Git"],
   [
-    "a) HyperText Markup Language",
-    "b) HyperText Makeup Language",
-    "c) Hyper Transfer Markup Language",
-    "d) Hyper Tool Markup Language",
+    "a) None, that's a hardware issue",
+    "b) Only one, but they'll need to Google it first",
+    "c) Two, but they'll blame it on each other's code",
+    "d) It depends on the framework they're using",
+  ],
+  [
+    "a) A code archer",
+    "b) A hack-tivist",
+    "c) Robin Root",
+    "d) The Legen-dary Coder",
   ],
 
   [
-    "a) Cascading Style Sheet",
-    "b) Creative Style Sheet",
-    "c) Computer Style Sheet",
-    "d) Colorful Style Sheet",
+    "a) A web developer",
+    "b) An eight-bit bug",
+    "c) A hacker-in-the-web",
+    "d) The Arachno-Coder",
   ],
-  ["a) background-color", "b) font-color", "c) text-color", "d) color"],
-  ["a) git add", "b) git init", "c) git commit", "d) git clone"],
-  ["a) git add", "b) git init", "c) git commit", "d) git push"],
-  [
-    "a) To get the value of an input field",
-    "b) To retrieve an element from the DOM",
-    "c) To create a new HTML element",
-    "d) To append an element to the DOM",
-  ],
-  ["a) String", "b) Boolean", "c) Integer", "d) Object"],
-  ["a) var", "b) const", "c) let", "d) All of the above"],
-  ["a) padding", "b) margin", "c) space", "d) spacing"],
 
   [
-    "a) Pushes changes to a remote repository",
-    "b) Fetches and merges changes from a remote repository",
-    "c) Creates a new branch in Git",
-    "d) Discards all local changes and resets the repository",
+    "a) He couldn't debug his boss",
+    "b) He was tired of the Ctrl+Alt+Del routine",
+    "c) He wanted to be a byte-sized comedian",
+    "d) He couldn't find his 'Shift' key anymore",
   ],
-  ["a) React", "b) Django", "c) Express", "d) Flask"],
+
+  ["a) Java", "b) Code Brew", "c) Ctrl + Coffee", "d) Python Punch"],
+
   [
-    "'a) // Comment'",
-    "b) <!-- Comment -->",
-    "c) /* Comment */",
-    "d) ** Comment **",
+    "a) By coding a fish-catching algorithm",
+    "b) With a keyboard hooked to the fishing line",
+    "c) By sending an email to the fish",
+    "d) By telling the fish a 'C#-ret' joke",
   ],
-  ["a) font-weight", "b) text-style", "c) font-style", "d) text-bold"],
+
   [
-    "a) To add a new HTML element to the DOM",
-    "b) To add an event handler to an HTML element",
-    "c) To modify the style of an HTML element",
-    "d) To remove an HTML element from the DOM",
+    "a) A prehistoric programmer",
+    "b) A Megabyte-saur",
+    "c) A Jurassic Coder",
+    "d) A Dinoscript Expert",
   ],
-  ["a) git add", "b) git init", "c) git branch", "d) git commit"],
-  ["a) .class-name", "b) #id-name", "c) $name", "d) element-name"],
+
   [
-    "a) Displays output in the console",
-    "b) Prints a message to the user's screen",
-    "c) Shows a pop-up message",
-    "d) Executes a JavaScript function]",
+    "a) He spent all his money on debugging tools",
+    "b) He couldn't escape the infinite loop of online shopping",
+    "c) He invested in 'Bit'coin instead of Bitcoin",
+    "d) He kept giving away code for free (open-source style)",
+  ],
+
+  [
+    "a) It had a bad case of malware-aise",
+    "b) It needed a Java-ectomy",
+    "c) It wanted to upgrade to the latest operating system",
+    "d) It had a CAPS LOCKS virus",
+  ],
+
+  [
+    "a) 'The Code-ly in the Wind'",
+    "b) 'Don't Stop Coding'",
+    "c) 'I Will Always Debug You'",
+    "d) 'Byte Me Maybe'",
   ],
 ];
-const correctAns = [3, 0, 0, 0, 3, 1, 0, 1, 2, 3, 2, 0, 1, 0, 0, 0, 1, 2, 2, 0];
+const correctAns = [2, 2, 0, 0, 2, 2, 3, 2, 1, 2];
 
 var timerEl = document.getElementById("Timer");
 var header = document.getElementsByName("body");
@@ -148,47 +147,67 @@ var AnsDEl = document.getElementById("AnsD");
 
 var ansButtons = [AnsAEl, AnsBEl, AnsCEl, AnsDEl];
 var questionIndex = 1;
-var timeLeft = 60;
+var timeLeft = 5;
 var score = 0;
 
 function startQuiz() {
-  //countdown();
   CurrentQuestionE1.innerHTML = questions[0];
   for (ansbut in ansButtons) {
     ansButtons[ansbut].addEventListener("click", nextQuestion);
-    ansContainer.children[ansbut].firstChild.innerHTML = answers[0][ansbut];
+    ansButtons[ansbut].textContent = answers[0][ansbut];
   }
 }
 
 function nextQuestion(event) {
-  ansButtons[correctAns[questionIndex-1]].style.backgroundColor = "green";
-  setTimeout(function () {
+  ansButtons[correctAns[questionIndex - 1]].style.borderColor = "green";
 
+  if (event.target == ansButtons[correctAns[questionIndex - 1]]) {
+    score += 10;
+    updateScore();
+  } else {
+    timeLeft -= 5;
+    event.target.style.borderColor = "red";
+    console.log("time decreased");
+  }
+
+  setTimeout(function () {
     questionIndex += 1;
     console.log(questions[questionIndex]);
     CurrentQuestionE1.innerHTML = questions[questionIndex];
-
     for (ansbut in ansButtons) {
-        ansContainer.children[ansbut].firstChild.innerHTML = answers[questionIndex][ansbut];
-        ansContainer.children[ansbut].style.backgroundColor = "pink";
-        
-      }
+      ansButtons[ansbut].textContent = answers[questionIndex][ansbut];
+      ansButtons[ansbut].style.borderColor = "white";
+    }
   }, 300);
-
   event.stopPropagation();
 }
 
-function updateScore(){
-    currentScoreEL.innerHTML = "Score: " + score;
+function updateScore() {
+  currentScoreEL.innerHTML = "Score: " + score;
+}
+
+function saveScore() {
+  var storedScores = JSON.parse(localStorage.getItem("scores"));
+  if (storedScores == null) {
+    storedScores = [];
+  }
+  console.log(typeof storedScores[0]);
+  storedScores.push(score);
+  console.log(storedScores);
+  localStorage.setItem("scores", JSON.stringify(storedScores));
 }
 
 function countdown() {
-  
-
   var timeInterval = setInterval(function () {
     timerEl.innerHTML = "Time: " + --timeLeft;
-    if (timeLeft == 0) {
+    if (timeLeft <= 0 || questionIndex == 10) {
+      console.log("game done");
+
       clearInterval(timeInterval);
+      saveScore();
+      window.location.href = "./highscore.html";
+
+      return;
     }
   }, 1000);
 }

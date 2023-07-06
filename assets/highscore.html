@@ -9,22 +9,21 @@
 </head>
 <body>
     <header>
-    <h3 id="highScores">View High Scores</h3>
-    <h3 id="Timer">Time: 60</h3>
+    <h3>View High Scores</h3>
+    <h3>Time: 60</h3>
     </header>
     <main>
-        <H1 id="currentQuestion"></H1>
-            <div>
-                <ul id="answer">
-                    <li><a>A</a></li>
-                    <li><a>B</a></li>
-                    <li><a>C</a></li>
-                    <li><a>D</a></li>
-                </ul>
-            </div>
+        <H1>High Scores</H1>
+        <h2>Save your Score</h2>
+        <form id = "userInitialsForm" method = "POST">
+            <Label for="userInitials">Enter Your Initials:</Label>
+            <input type = "text" placeholder = "Initials: " name="userInitials" id="userInitials"/>
+        </form>
+        <ul id="scores"></ul>
+
 
     </main>
 </body>
 
-<script src="./assets/js/scripts.js"></script>
+<script src="./js/highScores.js"></script>
 </html>

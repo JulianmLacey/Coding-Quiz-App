@@ -54,7 +54,7 @@ function endGame(){
 
 //var MCQ = {
 var questions = [
-    "How many programmers does it take to change a lightbulb?",
+  "How many programmers does it take to change a lightbulb?",
   "What do you call a programmer who's good with a bow and arrow?",
   "What do you call a coding spider?",
   "Why did the programmer quit his job?",
@@ -62,18 +62,18 @@ var questions = [
   "How does a programmer fish?",
   "What do you call a coding dinosaur?",
   "Why did the developer go broke?",
-  
+
   "Why did the computer go to the doctor?",
   "What's a programmer's favorite song?",
 ];
 
 const answers = [
-    [
-        "a) None, that's a hardware issue",
-        "b) Only one, but they'll need to Google it first",
-        "c) Two, but they'll blame it on each other's code",
-        "d) It depends on the framework they're using",
-      ],
+  [
+    "a) None, that's a hardware issue",
+    "b) Only one, but they'll need to Google it first",
+    "c) Two, but they'll blame it on each other's code",
+    "d) It depends on the framework they're using",
+  ],
   [
     "a) A code archer",
     "b) A hack-tivist",
@@ -118,8 +118,6 @@ const answers = [
     "d) He kept giving away code for free (open-source style)",
   ],
 
- 
-
   [
     "a) It had a bad case of malware-aise",
     "b) It needed a Java-ectomy",
@@ -149,7 +147,7 @@ var AnsDEl = document.getElementById("AnsD");
 
 var ansButtons = [AnsAEl, AnsBEl, AnsCEl, AnsDEl];
 var questionIndex = 1;
-var timeLeft = 60;
+var timeLeft = 5;
 var score = 0;
 
 function startQuiz() {
@@ -188,11 +186,28 @@ function updateScore() {
   currentScoreEL.innerHTML = "Score: " + score;
 }
 
+function saveScore() {
+  var storedScores = JSON.parse(localStorage.getItem("scores"));
+  if (storedScores == null) {
+    storedScores = [];
+  }
+  console.log(typeof storedScores[0]);
+  storedScores.push(score);
+  console.log(storedScores);
+  localStorage.setItem("scores", JSON.stringify(storedScores));
+}
+
 function countdown() {
   var timeInterval = setInterval(function () {
     timerEl.innerHTML = "Time: " + --timeLeft;
-    if (timeLeft == 0) {
+    if (timeLeft <= 0 || questionIndex == 10) {
+      console.log("game done");
+
       clearInterval(timeInterval);
+      saveScore();
+      window.location.href = "./highscore.html";
+
+      return;
     }
   }, 1000);
 }

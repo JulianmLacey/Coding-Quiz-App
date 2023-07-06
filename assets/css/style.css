@@ -26,10 +26,7 @@ main {
   width: 90%;
   display: block;
   text-align: center;
-}
-
-main h1{
-
+  
 }
 
 main button{
@@ -49,7 +46,8 @@ main h3{
 }
 
 main div{
-  padding-inline: 20%;
+  /*padding-inline: 20%;*/
+  justify-content: center;
 }
 main div ul {
   list-style: none;
@@ -74,3 +72,23 @@ main div ul li:hover {
   background-color: #ff2171 !important;
   padding-inline: 10px;
 }
+
+#mainHS{
+  padding-inline: 40%;
+}
+
+#todo-list{
+  list-style: none;
+  display: inherit;
+  justify-content: center;
+}
+#todo-list li{
+  margin-inline: 30%;
+  display:inherit;
+  border-style: solid;
+  border-color: #ff2171;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  font-size: large;
+  padding-block: 7px;
+ }

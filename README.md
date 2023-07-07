@@ -19,7 +19,7 @@ WHEN the game is over, I can save my initials and my score
 
 The following animation demonstrates the application functionality:
 
-![Mockup](./assets/Screenshot 2023-07-06 at 10.28.32 PM.png)
+![Mockup](./assets/mockup.png)
 
 
 ## Live Demo

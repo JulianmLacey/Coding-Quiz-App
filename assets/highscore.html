@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Coding Quiz</title>
+  </head>
+  <body>
     <header>
-    <h3>View High Scores</h3>
-    <h3 onclick="window.location.href = './quiz.html'">Play Again</h3>
+      <h3>View High Scores</h3>
+      <h3 onclick="window.location.href = './quiz.html'">Play Again</h3>
     </header>
     <main id="mainHs">
-        <H1>High Scores</H1>
-        <form id="todo-form" method="POST">
-            <label for="todo-text">Save Score: </label>
-            <input type="text" placeholder="Enter Initials: " name="todo-text" id="todo-text" />
-          </form>
-          
-          <ul id="todo-list"></ul>
+      <h1>High Scores</h1>
+      <form id="user-form" method="POST">
+        <label for="user-text">Save Score: </label>
+        <input
+          type="text"
+          placeholder="Enter Initials: "
+          name="user-text"
+          id="user-text" />
+      </form>
 
-
+      <ul id="user-list"></ul>
     </main>
-</body>
+  </body>
 
-<script src="./js/highScores.js"></script>
+  <script src="./js/highScores.js"></script>
 </html>

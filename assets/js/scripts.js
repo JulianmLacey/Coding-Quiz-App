@@ -147,7 +147,7 @@ var AnsDEl = document.getElementById("AnsD");
 
 var ansButtons = [AnsAEl, AnsBEl, AnsCEl, AnsDEl];
 var questionIndex = 1;
-var timeLeft = 5;
+var timeLeft = 30;
 var score = 0;
 
 function startQuiz() {
@@ -167,12 +167,11 @@ function nextQuestion(event) {
   } else {
     timeLeft -= 5;
     event.target.style.borderColor = "red";
-    console.log("time decreased");
   }
 
   setTimeout(function () {
     questionIndex += 1;
-    console.log(questions[questionIndex]);
+
     CurrentQuestionE1.innerHTML = questions[questionIndex];
     for (ansbut in ansButtons) {
       ansButtons[ansbut].textContent = answers[questionIndex][ansbut];
@@ -191,9 +190,9 @@ function saveScore() {
   if (storedScores == null) {
     storedScores = [];
   }
-  console.log(typeof storedScores[0]);
+
   storedScores.push(score);
-  console.log(storedScores);
+
   localStorage.setItem("scores", JSON.stringify(storedScores));
 }
 
@@ -201,8 +200,6 @@ function countdown() {
   var timeInterval = setInterval(function () {
     timerEl.innerHTML = "Time: " + --timeLeft;
     if (timeLeft <= 0 || questionIndex == 10) {
-      console.log("game done");
-
       clearInterval(timeInterval);
       saveScore();
       window.location.href = "./highscore.html";

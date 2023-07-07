@@ -1,30 +1,30 @@
-var todoInput = document.querySelector("#todo-text");
-var todoForm = document.querySelector("#todo-form");
-var todoList = document.querySelector("#todo-list");
+var userInput = document.querySelector("#user-text");
+var userForm = document.querySelector("#user-form");
+var userList = document.querySelector("#user-list");
 
-var todos = [];
+var users = [];
 var scores = [];
 
-todoForm.addEventListener("submit", function (event) {
+userForm.addEventListener("submit", function (event) {
   event.preventDefault();
-  var todoText = todoInput.value.trim();
+  var userText = userInput.value.trim();
 
-  if (todoText === "") {
+  if (userText === "") {
     return;
   }
 
-  todos.push(todoText);
-  todoInput.value = "";
+  users.push(userText);
+  userInput.value = "";
 
-  storeTodos();
+  storeusers();
   sortArray(0);
-  console.log("Array Sorted");
-  renderTodos();
-  todoForm.parentElement.removeChild(todoForm);
+
+  renderusers();
+  userForm.parentElement.removeChild(userForm);
 });
 
-function storeTodos() {
-  localStorage.setItem("todos", JSON.stringify(todos));
+function storeusers() {
+  localStorage.setItem("users", JSON.stringify(users));
 }
 
 function sortArray(index) {
@@ -35,41 +35,39 @@ function sortArray(index) {
       scores[i] = scores[i + 1];
       scores[i + 1] = temp;
 
-      var temp2 = todos[i];
-      todos[i] = todos[i + 1];
-      todos[i + 1] = temp2;
+      var temp2 = users[i];
+      users[i] = users[i + 1];
+      users[i + 1] = temp2;
 
       sortArray(index + 1);
     }
   }
 }
-function renderTodos() {
-  todoList.innerHTML = "";
+function renderusers() {
+  userList.innerHTML = "";
 
-  for (var i = todos.length - 1; i >= 0; i--) {
-    var todo = todos[i];
+  for (var i = users.length - 1; i >= 0; i--) {
+    var user = users[i];
     var score = scores[i];
     var li = document.createElement("li");
-    li.textContent = todos.length - i + ". " + todo + " :     " + score;
-    console.log(score);
-    console.log(todo);
+    li.textContent = users.length - i + ". " + user + " :     " + score;
 
     li.setAttribute("data-index", i);
 
-    todoList.appendChild(li);
+    userList.appendChild(li);
   }
 }
 
 init(); //entry point
 
 function init() {
-  var storedTodos = JSON.parse(localStorage.getItem("todos"));
+  var storedusers = JSON.parse(localStorage.getItem("users"));
   var storedScores = JSON.parse(localStorage.getItem("scores"));
 
-  if (storedTodos !== null && storedScores !== null) {
-    todos = storedTodos;
+  if (storedusers !== null && storedScores !== null) {
+    users = storedusers;
     scores = storedScores;
   }
 
-  renderTodos();
+  renderusers();
 }

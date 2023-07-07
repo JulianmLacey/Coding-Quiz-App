@@ -7,13 +7,14 @@ header {
   color: #ff90bb;
   display: flex;
   justify-content: space-between;
+  padding-inline: 25px;
 }
-header h3 a{
+header h3 a {
   color: #ff90bb;
   display: inline-flex;
   text-decoration: none;
 }
-header h3:hover a{
+header h3:hover a {
   color: #ff2171;
 }
 header #Timer,
@@ -26,10 +27,9 @@ main {
   width: 90%;
   display: block;
   text-align: center;
-  
 }
 
-main button{
+main button {
   background-color: #ff90bb;
   padding-inline: 10px;
   padding-block: 7px;
@@ -41,19 +41,17 @@ main button{
   border-color: white;
   border-width: 5px;
 }
-main h3{
+main h3 {
   justify-self: center;
 }
 
-main div{
-  /*padding-inline: 20%;*/
+main div {
   justify-content: center;
 }
 main div ul {
   list-style: none;
   display: block;
   text-align: left;
-  
 }
 main div ul li {
   background-color: #ff90bb;
@@ -72,22 +70,22 @@ main div ul li:hover {
   padding-inline: 10px;
 }
 
-#mainHS{
+#mainHS {
   padding-inline: 40%;
 }
 
-#todo-list{
+#user-list {
   list-style: none;
   display: inherit;
   justify-content: center;
 }
-#todo-list li{
+#user-list li {
   margin-inline: 30%;
-  display:inherit;
+  display: inherit;
   border-style: solid;
   border-color: #ff2171;
   border-radius: 3px;
   margin-bottom: 10px;
   font-size: large;
   padding-block: 7px;
- }
+}
